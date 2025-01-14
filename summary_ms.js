@@ -10,8 +10,8 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 app.locals.config = config;
 
 // Importing the routes
-const gemini = require("./routes/gemini.js");
-app.use(gemini)
+const summary_route = require("./routes/summary_route.js");
+app.use(summary_route)
 
 // Starting the server
 const PORT = 3000;
